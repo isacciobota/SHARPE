@@ -28,8 +28,9 @@ cd kernels/selective_scan
 pip install .
 ```
 
-Download and preprocess Human3.6M
-Download and preprocess MPI-INF-3DHP
+3. Download and preprocess Human3.6M
+
+4. Download and preprocess MPI-INF-3DHP
 
 ## Training
 
