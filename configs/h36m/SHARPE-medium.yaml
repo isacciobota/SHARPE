@@ -1,0 +1,49 @@
+#Training
+learning_rate: 0.0005
+batch_size: 10
+weight_decay: 0.01
+lr_decay: 0.99
+epochs: 60
+
+# Model
+model_name: SHARPE
+n_layers: 20
+dim_in: 3
+dim_feat: 128
+dim_rep: 512
+dim_out: 3
+mlp_ratio: 2.0
+act_layer: gelu
+drop: 0.
+drop_path: 0.
+layer_scale_init_value: 0.00001
+mixer:
+  '1': 'mamba'
+  '2': 'mamba'
+n_frames: 27
+
+# SS2D Params
+d_state: 1
+ssm_ratio: 2.0
+conv_kernel: 5
+
+# Data
+data_root: data/motion3d/
+data_root_2d: data/motion2d/
+subset_list: [ H36M-81 ]
+dt_file: h36m_sh_conf_cam_source_final.pkl
+num_joints: 17
+root_rel: True # Normalizing joints relative to the root joint
+add_velocity: False
+
+# Loss
+lambda_3d_velocity: 20.0
+lambda_scale: 0.5
+lambda_lv: 0.0
+lambda_lg: 0.0
+lambda_a: 0.0
+lambda_av: 0.0
+
+# Augmentation
+use_proj_as_2d: False
+flip: True
