@@ -13,10 +13,19 @@
 
 ## Setup
 
-Run this command for instalation of dependencies:
+1. Clone this repository
+
+```
+git clone https://github.com/isacciobota/SHARPE
+cd SHARPE
+```
+
+2. Run this commands for instalation of dependencies:
 
 ```
 pip install -r requirements.txt
+cd kernels/selective_scan
+pip install .
 ```
 
 Download and preprocess Human3.6M
