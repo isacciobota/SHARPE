@@ -20,7 +20,7 @@ git clone https://github.com/isacciobota/SHARPE
 cd SHARPE
 ```
 
-2. Run this commands for instalation of dependencies:
+2. Run this commands for installation of dependencies:
 
 ```
 pip install -r requirements.txt
