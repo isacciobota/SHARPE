@@ -96,7 +96,7 @@ We recommend doing the following steps:
 
 2. Zip the folder that you have locally and upload it to your Google Drive account.
 
-3. You can use the `SHARPE.ipnyb` file from our repository.
+3. You can use the `SHARPE.ipynb` file from our repository.
 
 ## Thank you
 
