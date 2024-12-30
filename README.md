@@ -50,11 +50,11 @@ pip install .
 
 Command for training on Human3.6M:
 ```
-python train.py --config configs\h36m\config_file_name.yaml
+python train.py --config configs/h36m/config_file_name.yaml
 ```
 Command for training on MPI-INF-3DHP:
 ```
-python train_3dhp.py --config configs\mpi\config_file_name.yaml
+python train_3dhp.py --config configs/mpi/config_file_name.yaml
 ```
 Extra arguments:
 ```
@@ -73,13 +73,22 @@ Command for evaluation on MPI-INF-3DHP:
 python train_3dhp.py --eval-only --checkpoint checkpoints/mpi/path_to_checkpoint_dir --checkpoint_file checkpoint_file_name --config --configs/mpi/config_file_name.yaml
 ```
 
+> [!NOTE]
+> For PCK and AUC metrics on MPI-INF-3DHP clone this repository: [STCFormer](https://github.com/zhenhuat/STCFormer/tree/main/3dhp_test).
+> 
+> Use the generated `inference_data_best.mat` and place it in `STCFormer/checkpoint` folder.
+> 
+> Download the original MPI-INF-3DHP dataset from [here](https://vcai.mpi-inf.mpg.de/3dhp-dataset/). Modify the config to download all subjects and run the script. Place TS1-TS6 in the `STCFormer/3dhp_test` folder.
+> 
+> Run `STCFormer/3dhp_test/test_util/mpii_test_predictions_py.m` script usint Matlab.
+
 ## Inference
 
 This is an adaption from [MotionAGFormer](https://github.com/TaatiTeam/MotionAGFormer)
 
-1. Place your own video in the `.\demo\video` folder.
+1. Place your own video in the `./demo/video` folder.
 
-2. Download YOLOv3 and HRNet pretrained models for 2D detecton from [here](https://drive.google.com/drive/folders/1_ENAMOsPM7FXmdYRbkwbFHgzQq_B_NQA). Place them in the `.\demo\lib\checkpoint` folder.
+2. Download YOLOv3 and HRNet pretrained models for 2D detecton from [here](https://drive.google.com/drive/folders/1_ENAMOsPM7FXmdYRbkwbFHgzQq_B_NQA). Place them in the `./demo/lib/checkpoint` folder.
 
 3. Currently, we are using the SHARPE-tiny model, pretrained on Human3.6M. If you want to change that, make sure to modify `inference.py` to update the model and the config file.
 
