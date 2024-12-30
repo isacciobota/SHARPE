@@ -48,13 +48,13 @@ pip install .
 
 ## Training
 
-Command for Human3.6M:
+Command for training on Human3.6M:
 ```
-python train.py --config configs\h36m\config_file.yaml
+python train.py --config configs\h36m\config_file_name.yaml
 ```
-Command for MPI-INF-3DHP:
+Command for training on MPI-INF-3DHP:
 ```
-python train_3dhp.py --config configs\mpi\config_file.yaml
+python train_3dhp.py --config configs\mpi\config_file_name.yaml
 ```
 Extra arguments:
 ```
@@ -64,13 +64,39 @@ Extra arguments:
 
 ## Evaluation
 
-Command for Human3.6M
-Command for MPI-INF-3DHP
+Command for evaluation on Human3.6M:
+```
+python train.py --eval-only --checkpoint checkpoints/h36m/path_to_checkpoint_dir --checkpoint_file checkpoint_file_name --config --configs/h36m/config_file_name.yaml
+```
+Command for evaluation on MPI-INF-3DHP:
+```
+python train_3dhp.py --eval-only --checkpoint checkpoints/mpi/path_to_checkpoint_dir --checkpoint_file checkpoint_file_name --config --configs/mpi/config_file_name.yaml
+```
 
 ## Inference
 
-Details
-Command
+This is an adaption from [MotionAGFormer](https://github.com/TaatiTeam/MotionAGFormer)
+
+1. Place your own video in the `.\demo\video` folder.
+
+2. Download YOLOv3 and HRNet pretrained models for 2D detecton from [here](https://drive.google.com/drive/folders/1_ENAMOsPM7FXmdYRbkwbFHgzQq_B_NQA). Place them in the `.\demo\lib\checkpoint` folder.
+
+3. Currently, we are using the SHARPE-tiny model, pretrained on Human3.6M. If you want to change that, make sure to modify `inference.py` to update the model and the config file.
+
+Run this command in the base folder:
+```
+python inference.py --video video_file_name.mp4
+```
+
+## Running in Jupyter Notebook or Google Colab
+
+We recommend doing the following steps:
+
+1. Make sure you have done all the steps presented above.
+
+2. Zip the folder that you have locally and upload it to your Google Drive account.
+
+3. You can use the `SHARPE.ipnyb` file from our repository.
 
 ## Thank you
 
