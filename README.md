@@ -2,9 +2,9 @@
 
 ## Summary
 
-* We propose a new dual-stream architecture calledSHARPE, based on state-space models (SSMs), designed for 3D Human Pose Estimation. We consider it an alternative to hybrid and Transformer based architectures, addressing their issues with processing long input sequences.
+* We propose a new dual-stream architecture called SHARPE, based on state-space models (SSMs), designed for 3D Human Pose Estimation. We consider it an alternative to hybrid and Transformer based architectures, addressing their issues with processing long input sequences.
 * The network is designed to be scalable. It can be easily adapted to meet different needs: having better accuracy but with the disadvantage being slower and having more parameters, or having lower accuracy but with the advantage of being lightweight (fast and fewer parameters).
-* The model achieves state-of-the-art results on MPI-INF3DHP and Human36M, popular datasets for 3D Human Pose Estimation. It does this while having fewer parameters than it’s predecessors
+* The model achieves state-of-the-art results on MPI-INF3DHP and Human36M, popular datasets for 3D Human Pose Estimation. It does this while having fewer parameters than it’s predecessors.
 
 ## Architecture
 
@@ -80,7 +80,7 @@ python train_3dhp.py --eval-only --checkpoint checkpoints/mpi/path_to_checkpoint
 > 
 > Download the original MPI-INF-3DHP dataset from [here](https://vcai.mpi-inf.mpg.de/3dhp-dataset/). Modify the config to download all subjects and run the script. Place TS1-TS6 in the `STCFormer/3dhp_test` folder.
 > 
-> Run `STCFormer/3dhp_test/test_util/mpii_test_predictions_py.m` script usint Matlab.
+> Run `STCFormer/3dhp_test/test_util/mpii_test_predictions_py.m` script using Matlab.
 
 ## Inference
 
@@ -112,5 +112,6 @@ We recommend doing the following steps:
 We want to say a big thank you to the authors of the following projects. Their code served as a starting point for our model:
 * [MotionBERT](https://github.com/Walter0807/MotionBERT)
 * [MotionAGFormer](https://github.com/TaatiTeam/MotionAGFormer)
-* [VMamba](https://github.com/MzeroMiko/VMamba/tree/main/kernels/selective_scan)
-* [P-STMO](https://github.com/paTRICK-swk/P-STMO#mpi-inf-3dhp)
+* [VMamba](https://github.com/MzeroMiko/VMamba)
+* [P-STMO](https://github.com/paTRICK-swk/P-STMO)
+* [STCFormer](https://github.com/zhenhuat/STCFormer)
