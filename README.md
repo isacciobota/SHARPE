@@ -107,6 +107,14 @@ We recommend doing the following steps:
 
 3. You can use the `SHARPE.ipynb` file from our repository.
 
+## Contact
+
+<img src="https://img.icons8.com/?size=48&id=P7UIlhbpWzZm&format=png" width="18"/> ciobotaisac@gmail.com  
+
+<a href="https://www.linkedin.com/in/your-profile/">
+  <img src="https://img.icons8.com/color/48/000000/linkedin.png" width="18"/>
+</a> www.linkedin.com/in/isac-ciobota
+
 ## Thank you
 
 We want to say a big thank you to the authors of the following projects. Their code served as a starting point for our model:
