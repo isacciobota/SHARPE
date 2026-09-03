@@ -104,7 +104,7 @@ class SS2DBlock(nn.Module):
         x = self.dw_conv(x)
         x = x.permute(0, 2, 3, 1) # [B, C, T, J] -> [B, T, J, C]
         x = self.act_1(x)
-        x = self.ss2d(x, selective_scan_backend='torch', scan_mode="cross2d", scan_force_torch=False)
+        x = self.ss2d(x, chunk_size=9, selective_scan_backend='torch', scan_mode="cross2d", scan_force_torch=False)
         x = self.act_2(self.norm(x))
         out = self.dropout(self.out_proj(x))
         return out
