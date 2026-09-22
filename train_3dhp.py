@@ -206,6 +206,7 @@ def train(args, opts):
     lr = args.learning_rate
     optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()),
                             lr=lr,
+                            weight_decay=args.weight_decay,
                             amsgrad=True)
     lr_decay = args.lr_decay
     epoch_start = 0

@@ -1,7 +1,7 @@
 #Training
 learning_rate: 0.0005
 batch_size: 10
-weight_decay: 0.01
+weight_decay: 0.0
 lr_decay: 0.99
 epochs: 90
 
@@ -34,8 +34,6 @@ stride: 9
 num_joints: 17
 out_joints: 17
 test_augmentation: True
-data_augmentation: True
-reverse_augmentation: False
 out_all: 1
 test_batch_size: 128
 
